@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- This is the main page of the IFRAME -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACTIVITY HTML</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&display=swap');
+        body {
+            margin: 0;
+            font-family: "Archivo Black", "Redaction 50";
+            background-color: #211f27;
+        }
+
+        /* Main container */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Left column - Navigation */
+        .menu {
+            width: 25%;
+            background-image: url(images/index/menu.png);
+            background-size: cover;
+            padding: 20px;
+            margin: 10px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .menu:hover{
+            background-image: url(images/index/menu1.png);
+            background-size: cover;
+        }
+
+        .menu h2 {
+            color: white;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #cb52d6;
+            border-radius: 15px;
+        }
+
+        .menu a:hover {
+            background-color: #6f3780;
+            transition: transform 1s infinite;
+            transform: scale(1.1, 1.3);
+        }
+
+        /* Right column - Content */
+        .content {
+            width: 75%;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .ContHeader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        height: 100px;
+        background-image: url(images/index/banner.png);
+        color: white;
+        overflow: hidden;
+        border-radius: 10px;
+        margin: 10px;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 50px;
+        }
+
+        .carousel h1 {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            opacity: 0;
+            animation: animation 8s infinite;
+        }
+
+        .carousel h1:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .carousel h1:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        .carousel h1:nth-child(3) {
+            animation-delay: 4s;
+        }
+
+        
+        .carousel h1:nth-child(4) {
+            animation-delay: 6s;
+        }
+
+        @keyframes animation {
+            0% {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            10%, 25% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+            35%, 100% {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="ContHeader">
+        <div class="carousel">
+            <h1>FROM BSIT 1 - C</h1>
+            <h1>WELCOME TO MY WEBSITE!</h1>
+            <h1>CREATED BY STUDENT</h1>
+            <h1>TRIBO, JOHN PHILIP P.</h1>
+        </div>
+    </div>
+    <div class="container">
+
+        <!-- LEFT COLUMN -->
+        <div class="menu">
+            <h2>Tribo, John Philip P.</h2>
+
+            <a href="home.html" target="contentFrame">Home</a>
+            <a href="aboutme.html" target="contentFrame">About My Self</a>
+            <a href="gallery.html" target="contentFrame">Gallery</a>
+            <a href="contact.html" target="contentFrame">Contact</a>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="content">
+            <iframe
+                src="aboutme.html"
+                name="contentFrame"
+                title="Page Content">
+            </iframe>
+            
+        </div>
+
+    </div>
+
+</body>
+</html>

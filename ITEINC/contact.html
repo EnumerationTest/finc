@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&display=swap');
+
+        body {
+            background-image: url(images/bg.png);
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: "Redaction 50", serif;
+            color: white;
+            /* leaves room so the fixed footer never covers content */
+            padding-bottom: 90px;
+        }
+
+        header {
+            background: linear-gradient(180deg, #451C69, #9B33A9);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        main {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* 2 x 2 grid of contact buttons */
+        .contacts {
+            display: grid;
+            grid-template-columns: repeat(2, 280px);
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .contact a {
+            display: block;
+        }
+
+        .contact img {
+            display: block;
+            width: 280px;
+            transition: transform 0.3s;
+        }
+
+        .contact img:hover {
+            transform: skewY(10deg);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(180deg, #9B33A9, #451C69);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            position: fixed;
+            bottom: 0;
+            left: 8px;
+            right: 8px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .menu a {
+            font-size: 17px;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        .menu a:hover {
+            transform: scale(1.1, 1.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Contacts/Socials</h1>
+    </header>
+
+    <main>
+        <div class="contacts">
+
+            <div class="contact">
+                <a href="mailto:Johntribo42@gmail.com"><img src="icons/Mail.png" alt="Email"></a>
+            </div>
+
+            <div class="contact">
+                <a href="https://www.facebook.com/profile.php?id=61593020649482" target="_blank"><img src="icons/Facebook.png" alt="Facebook"></a>
+            </div>
+
+            <div class="contact">
+                <a href="https://www.instagram.com/jptribo/" target="_blank"><img src="icons/Insta.png" alt="Instagram"></a>
+            </div>
+
+            <div class="contact">
+                <a href="https://www.tiktok.com/@jaypetri" target="_blank"><img src="icons/Tiktok.png" alt="Tiktok"></a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="menu">
+            <a href="home.html" target="contentFrame">Home</a>
+            <a href="aboutme.html" target="contentFrame">About My Self</a>
+            <a href="gallery.html" target="contentFrame">Gallery</a>
+            <a href="contact.html" target="contentFrame">Contact</a>
+        </div>
+    </footer>
+
+</body>
+</html>
